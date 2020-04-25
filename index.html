@@ -59,7 +59,7 @@
         </ul>
         <h4>Variables:</h4>
         <ul>
-          <li>Your prgram can save values to your commputer's memory with variables.</li>
+          <li>Your program can save values to your commputer's memory with variables.</li>
           <li>A variable is like a container that can store a value, like 2, or even 2 + 2.</li>
           <li>You can create a variable by making an assignment statement, which looks like "spam = 420".</li>
           <li>You can use a variable name in place of any operators. If you were to type spam into the shell window, it would spit out the number 420, because that's what spam evaluates to.</li>
@@ -69,13 +69,47 @@
           <li>If an instruction evaluates to a single value, it's an expression, and if it doesn't, its a statement.</li>
         </ul>
       </div>
-
-      <h3>Section Resources:</h3>
-      <ul>
-        <li>Lesson One: <a class="resources"href="https://automatetheboringstuff.com/chapter0/#calibre_link-1935">Downloading and Installing Python</a></li>
-        <li>Lesson One: <a class="resources" href="https://automatetheboringstuff.com/chapter0/#calibre_link-1937">Starting IDLE</a></li>
-        <li>Lesson Two: <a class="resources" href="https://automatetheboringstuff.com/chapter1/#calibre_link-1949">Entering Expressions into the Interactive Shell</a></li>
-      </ul>
+      <div id="L3">
+        <h3>Lesson Three: Writing our first program</h3>
+        <ul>
+          <li>You can open the file editor by going to File > New file in the IDLE window, or you can just press CTRL + N.</li>
+          <li>You can write the following code into the file editor, and we will go over it line-by-line:<br>"# This program says hello and asks for my name"<br><br>"print('Hello World!')"<br>"print('What is your name?')
+             # ask for their name"<br>"myName = input()"<br>"print('It is good to meet you, ' + myName)"<br>"print('The length of your name is:')"<br>"print(len(myName))"<br>"print('What is your age?') #ask for their age"<br>
+             "myAge = input()"<br>"print('You will be ' + str(int(myAge) + 1) + 'in a year')"
+          </li><br>
+          <li>Python Files are just text files with a ".py" extension. You can save this file as "hello.py".</li>
+          <li>It's important to keep in mind that Python reads code chronologically, much like humans do.</li>
+          <li>If you think of using your finger to track where you're reading, this is much like what Python does when you tell it to read/run your code. In this analogy, your finger is known as "the executor".</li>
+          <li>So the first line, "# This program says hello and asks for my name", is known as a comment. Python ignores comments, you can use this to write notes or reminders to yourself to tell you what the code does.</li>
+          <li>The next line is blank, and is also completely ignored by Python, but it can be used to space out your code to make it more readable.</li>
+          <li>The second line, "print('Hello World')", uses the print function. The print function displays the contents inside the parenthesis onto the screen, so in this example, "Hello World" is printed out onto the screen.</li>
+          <li>Functions are like mini-programs that you can run and use while coding. They contain code that does various things. For your convenience, Python comes with a lot of functions.
+              In Python, a function is it's name followed by parenthesis, sometimes there are values passed into the function. In this example, the string containing the words "Hello World!" are passed into the print function.
+              These values that are being passed in are known as arguments. The action of using the print function can also be reffered to as "caling" it.
+          </li>
+          <li>The next line is calling the print function again, but this time passing in "What is your name?" as it's arguement. There is also a comment at the end explaining that we are asking the user from their name.</li>
+          <li>The input funtion is called in the next line. This function asks the user to type something and press enter before it continues executing.
+              In this case, we askes the user for their name, and now we are giving them the ability to answer the question. We then store this information into a variable called "myName".
+               Everything inputed using this function is put into a string value.
+          </li>
+          <li>In the next line, we use string concatenation to add a phrase to whatever the myName variable evaluates to after the user inputs their name.</li>
+          <li>Next, we use the "len" function. The len function takes a string as an arguement, and out puts an the integer that is equal to the amount of characters in that string. Whitespace is counted in the len function.</li>
+          <li>Then we have some more print and inpot calls that aske for the user's age.</li>
+          <li>Finally, we have the line "print('You will be ' + str(int(myAge) + 1) + ' in a year')". Here, we use the string, "str", and integer, "int", functions. These functions can be used to convert data types.
+              So you can use the str function to convert an integer to a string, the int function to convert a string to an integer (provided that the string is just a number),
+              or you could use the "float" function that converts strings or integers into floating point numbers. So since the input function returns a string value, you must first use the int function to
+              convert the myAge variable to a integer before we can perform math on said variable. Finally, we convert that value to a string so that we can concatenate it with our beginnning and ending phrases.
+          </li>
+        </ul>
+      </div>
+      <div id="secResrc">
+        <h3>Section Resources:</h3>
+        <ul>
+          <li>Lesson One: <a class="resources"href="https://automatetheboringstuff.com/chapter0/#calibre_link-1935">Downloading and Installing Python</a></li>
+          <li>Lesson One: <a class="resources" href="https://automatetheboringstuff.com/chapter0/#calibre_link-1937">Starting IDLE</a></li>
+          <li>Lesson Two: <a class="resources" href="https://automatetheboringstuff.com/chapter1/#calibre_link-1949">Entering Expressions into the Interactive Shell</a></li>
+        </ul>
+    </div>
     </div>
     <div class="pageButton">
       <div class="pageOneBlankSpace">
