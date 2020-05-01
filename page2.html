@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 2</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionTwo">
+      <h2>Section Two: Flow Control</h2>
+      <div id="L4">
+        <h3>Lesson Four: Flow Charts and Basic Flow Control Concepts</h3>
+        <ul>
+          <li>In a flow chart, you start a designated point, and follow the arrows until you get to the desired finishing point. There will be a link to a website that explains this concept in the
+              section resources part below.
+          </li>
+          <li>Instructions called "flow control statements" can decide which Python functions to execute under which conditions.</li>
+          <li>To understand how to make a flow chart-like program in Python, we must first learn the concept of Boolean Values, Comparison Operators and Boolean Operators.</li>
+          <li>The Boolean data type has only two values, True, and False. You can store boolean values in variable just like integers, strings, and floats. Just make sure to capitalize the first
+              letter of True or False, and <i>only</i> the first letter.
+          </li>
+          <li>Next we have comparison operators. There are 6 total comparison operators, and they can all be used to in the place of a arithmetic function. The six operators are:
+            <ol>
+              <li>"==" Equal to</li>
+              <li>"!=" Not equal to</li>
+              <li>"<" Less than</li>
+              <li>">" Greater than</li>
+              <li>"<=" Less than or equal to</li>
+              <li>">=" Greater than or equal to</li>
+            </ol>
+          </li>
+          <li>So, with all that in mind, if you were to put 42 == 42 into Python, what do you think would be returned? If you said "the boolean value of True", you'd be correct, and you can give yourself a
+              pat on the back. Same logic applies to 42 == 'Hello' evaluating to False.
+          </li>
+          <li>Theres also "!=", not equal to, that evalutates to True when a statement like, "2 != 3" is made. All of the less than, and less than or equal to statments work just as you'd expect them to as well.</li>
+          <li>You can also make these as complicated as you would with arithmetic, you could assign a value, like 17 to a variable called "myAge" and then say "myAge < 21", which would evaluate to True.</li>
+          <li>In Python, integers and strings will never be equal to each other. For instance, the statemnt 42 == '42', would evaluate to False, because the first 42 is an integer, and the next one is a string.</li>
+          <li>Float values and integers however, can evaluate to True in one of these comparison statements.</li>
+          <li>It's important to note that "==" and "=" are not the same thing! "=" is the assignment operator, and it is used for assigning values to variables, while "==" is strictly a
+              comparison operator that returns boolean values if formatted properly.
+          </li>
+          <li>There are also 3 boolean operators, "and", "or", and "not"</li>
+          <li>The and operator evaluates to True only if the 2 conditions given are both True. The and operator is just the word "and" all lower-case.</li>
+          <li>The or operator evaluates to True if one or both of the conditons given are True. The or operator is just the word "or" all lower-case.</li>
+          <li>The not operator evaluates to the opposite boolean value given. The not operator can only be given one statement, and it is also just the word "not" all lower-case.</li>
+          <li>You'll often mix boolean and comparison operators together in the same statement. For instance you could write:<br><br>myAge = 17<br>myPet = 'dog'<br> myAge < 89 and myPet = 'dog'<br>
+              This statement evaluates to True.
+          </li>
+
+        </ul>
+      </div>
+      <div id="secResrc">
+        <h3>Section Resources:</h3>
+        <ul>
+          <li>Lesson 4: <a class="resources" href="https://automatetheboringstuff.com/chapter2/">Flow Control</a></li>
+        </ul>
+    </div>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="index.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page2.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
