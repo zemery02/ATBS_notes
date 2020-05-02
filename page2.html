@@ -30,14 +30,14 @@
               <li>">" Greater than</li>
               <li>"<=" Less than or equal to</li>
               <li>">=" Greater than or equal to</li>
-            </ol>
+            </ol><br>
           </li>
           <li>So, with all that in mind, if you were to put 42 == 42 into Python, what do you think would be returned? If you said "the boolean value of True", you'd be correct, and you can give yourself a
               pat on the back. Same logic applies to 42 == 'Hello' evaluating to False.
           </li>
-          <li>Theres also "!=", not equal to, that evalutates to True when a statement like, "2 != 3" is made. All of the less than, and less than or equal to statments work just as you'd expect them to as well.</li>
+          <li>Theres also "!=", not equal to, that evalutates to True when a statement like, "2 != 3" is made. All of the less than, and less than or equal to statements work just as you'd expect them to as well.</li>
           <li>You can also make these as complicated as you would with arithmetic, you could assign a value, like 17 to a variable called "myAge" and then say "myAge < 21", which would evaluate to True.</li>
-          <li>In Python, integers and strings will never be equal to each other. For instance, the statemnt 42 == '42', would evaluate to False, because the first 42 is an integer, and the next one is a string.</li>
+          <li>In Python, integers and strings will never be equal to each other. For instance, the statement 42 == '42', would evaluate to False, because the first 42 is an integer, and the next one is a string.</li>
           <li>Float values and integers however, can evaluate to True in one of these comparison statements.</li>
           <li>It's important to note that "==" and "=" are not the same thing! "=" is the assignment operator, and it is used for assigning values to variables, while "==" is strictly a
               comparison operator that returns boolean values if formatted properly.
@@ -50,6 +50,44 @@
               This statement evaluates to True.
           </li>
 
+        </ul>
+      </div>
+      <div id="L5">
+        <h3>Lesson Five: If, Else, and Elif Statements</h3>
+        <ul>
+          <li>Now that we know about boolean values as well as comparison and boolean operators, we can now cover some flow control statements. The most common of these are "if", and "else".</li>
+          <li>To start this lesson go ahead and type the following code into a new text editor window: <br> "name = 'Alice'<br> if name == 'Alice':<br><p style="text-indent: 24px;">print('Hello Alice')</p>
+              print('Done')"<br> You can save this as "if_example.py".
+          </li>
+          <li>The expression in the if statement, "if name == 'Alice'", is known as a condition.</li>
+          <li>If the condition evaluates to True, the indented code will will run. Since, in this example, name does equal 'Alice' it prints out the greeting.</li>
+          <li>If the conditon is False, it just skips the indented code, and in this example, just prints "Done".</li>
+          <li>The indented part of the code is known as a block, the indentation is the way to let Python know what is part of the if statement, and what is not.</li>
+          <li>If needed, you can have a block inside of a block. Blocks are also sometimes known as "clauses", just in the same way conditions are sometimes known as expressions.</li>
+          <li>As well as indentation, new blocks also require a colon at the end of the previous line.</li>
+          <li>We can use an else statement if we want something to happen if a condition is evaluated to False.</li>
+          <li>Open a new text file and write the following code: <br>password = 'swordfish'<br>if password == 'swordfish':<p style="text-indent:24px;">print('Access Granted.')</p>else:
+              <p style="text-indent:24px;">print('Wrong Password.')</p> You can save this file as "if_else_example.py".
+          </li>
+          <li>In this example, one and only one block will be executed by Python. For now it will print "Access Granted.", but if we changed the password variable to be "rosebud", it would print "Wrong Password."</li>
+          <li>If you need to write a statement with more than one condition, you can use the elif statement, which is just an abbreviation of "else if".</li>
+          <li>To get a good idea of the elif statement, input the following code into a new text editor window:<br>"name = 'Bob'<br>age = 3000<br>if name == 'Alice':<p style="text-indent:24px;">print('Hello, Alice')</p>
+              elif age < 12:<p style='text-indent:24px;'>print('You are not Alice, kiddo.')</p>elif age > 2000:<p style="text-indent:24px;">print('Unlike you, Alice is not an undead, immortal vampire.')</p>
+              elif age > 100:<p style="text-indent:24px;">print('You are not Alice, grannie.')"</p> You can name this file "if_elif_example.py".
+          </li>
+          <li>You can have as many elif statements follow an if statement as you need, but order does matter, because your program will ignore anything after a condition that is evaluated as True.</li>
+          <li>So in this example, it stops running after we get to the condition "elif age > 2000", and executes whatever is written for that condition.</li>
+          <li>It is also common to add an else statement to the end of an elif statement, so that something happens even if everything is evaluated to False.</li>
+          <li>You could ask for an input, and store into a variable, then you could write and if else statement that just says "if <i>variablename</i>:" this only evalutes to True if the user stores a
+              value inside of variable by inserting something into the input function. These statements are known as "Truthy" and "Falsey" values.
+          </li>
+          <li>It is more practical to have a condition like "if <i>variablename</i> != ''" because it makes a condition for Python to check, in this case, it's checking to see if
+              <i>variablename</i> is an empty string or not.
+          </li>
+          <li>For integers, 0 is Falsey, and all other values are Truthy. Likewise, 0.0 is the only Falsey float value.</li>
+          <li>Like the str and int function, you can use the bool function to turn a string, integer, or float value into a boolean value. For example you could write into the IDLE window, "bool(0)",
+              and it woulod evaluate to false.
+          </li>
         </ul>
       </div>
       <div id="secResrc">
