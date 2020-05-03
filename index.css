@@ -36,3 +36,7 @@ a.nextPage:hover, a.nextPage:active, a.prevPage:hover, a.prevPage:active {
 .resources {
   color: #FFE873;
 }
+
+p {
+  text-indent: 24px;
+}

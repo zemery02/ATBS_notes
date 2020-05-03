@@ -56,8 +56,8 @@
         <h3>Lesson Five: If, Else, and Elif Statements</h3>
         <ul>
           <li>Now that we know about boolean values as well as comparison and boolean operators, we can now cover some flow control statements. The most common of these are "if", and "else".</li>
-          <li>To start this lesson go ahead and type the following code into a new text editor window: <br> "name = 'Alice'<br> if name == 'Alice':<br><p style="text-indent: 24px;">print('Hello Alice')</p>
-              print('Done')"<br> You can save this as "if_example.py".
+          <li>To start this lesson go ahead and type the following code into a new text editor window: <br> "name = 'Alice'<br> if name == 'Alice':<br><p>print('Hello Alice')</p>
+              print('Done')"<br> You can save this as "if_example.py".<br>
           </li>
           <li>The expression in the if statement, "if name == 'Alice'", is known as a condition.</li>
           <li>If the condition evaluates to True, the indented code will will run. Since, in this example, name does equal 'Alice' it prints out the greeting.</li>
@@ -66,14 +66,14 @@
           <li>If needed, you can have a block inside of a block. Blocks are also sometimes known as "clauses", just in the same way conditions are sometimes known as expressions.</li>
           <li>As well as indentation, new blocks also require a colon at the end of the previous line.</li>
           <li>We can use an else statement if we want something to happen if a condition is evaluated to False.</li>
-          <li>Open a new text file and write the following code: <br>password = 'swordfish'<br>if password == 'swordfish':<p style="text-indent:24px;">print('Access Granted.')</p>else:
-              <p style="text-indent:24px;">print('Wrong Password.')</p> You can save this file as "if_else_example.py".
+          <li>Open a new text file and write the following code: <br>password = 'swordfish'<br>if password == 'swordfish':<p>print('Access Granted.')</p>else:
+              <p>print('Wrong Password.')</p> You can save this file as "if_else_example.py".<br>
           </li>
           <li>In this example, one and only one block will be executed by Python. For now it will print "Access Granted.", but if we changed the password variable to be "rosebud", it would print "Wrong Password."</li>
           <li>If you need to write a statement with more than one condition, you can use the elif statement, which is just an abbreviation of "else if".</li>
-          <li>To get a good idea of the elif statement, input the following code into a new text editor window:<br>"name = 'Bob'<br>age = 3000<br>if name == 'Alice':<p style="text-indent:24px;">print('Hello, Alice')</p>
-              elif age < 12:<p style='text-indent:24px;'>print('You are not Alice, kiddo.')</p>elif age > 2000:<p style="text-indent:24px;">print('Unlike you, Alice is not an undead, immortal vampire.')</p>
-              elif age > 100:<p style="text-indent:24px;">print('You are not Alice, grannie.')"</p> You can name this file "if_elif_example.py".
+          <li>To get a good idea of the elif statement, input the following code into a new text editor window:<br>"name = 'Bob'<br>age = 3000<br>if name == 'Alice':<p>print('Hello, Alice')</p>
+              elif age < 12:<p>print('You are not Alice, kiddo.')</p>elif age > 2000:<p>print('Unlike you, Alice is not an undead, immortal vampire.')</p>
+              elif age > 100:<p>print('You are not Alice, grannie.')"</p> You can name this file "if_elif_example.py".<br>
           </li>
           <li>You can have as many elif statements follow an if statement as you need, but order does matter, because your program will ignore anything after a condition that is evaluated as True.</li>
           <li>So in this example, it stops running after we get to the condition "elif age > 2000", and executes whatever is written for that condition.</li>
@@ -86,7 +86,45 @@
           </li>
           <li>For integers, 0 is Falsey, and all other values are Truthy. Likewise, 0.0 is the only Falsey float value.</li>
           <li>Like the str and int function, you can use the bool function to turn a string, integer, or float value into a boolean value. For example you could write into the IDLE window, "bool(0)",
-              and it woulod evaluate to false.
+              and it would e  valuate to false.
+          </li>
+        </ul>
+      </div>
+      <div id="L6">
+        <h3>Lesson Six: While Loops</h3>
+        <ul>
+          <li>The next flow control statement we'll cover is the while loop, which executes a block of code repeatedly so long as the given conditions are True.</li>
+          <li>You can open a new text editor window and enter the following code to follow along:<br>"spam = 0<br>while spam < 5:<p>print('Hello World!')</p>
+              <p>spam = spam + 1"</p> You can save this file as "while_example.py"<br>
+          </li>
+          <li>When run, this code prints out the string "Hello World" five times. This is because the spam variable starts at 0, and adds one everytime the block of code is executed.
+              So the spam variable starts at zero and runs until it gets to five, so at the end, spam = 4.This process of adding one to every loop is called incrementing.
+          </li>
+          <li>When the loop executes the block of code, it is called an iteration.</li>
+          <li>If you were to enter the same block of code into a if statement, it would be much harder to come to the end of the statement because you'd have to call the statement several times,
+              because the if statement does not loop back to the start of the statement and check if the conditions are True before running again.
+          </li>
+          <li>Open up a new text editor file and write the following code:<br>"name = ''<br>while name != 'your name':<p>print('Please type your name.')</p>
+              <p>name = input()</p>print('Thank you!')"<br> You can save this file as "yourName.py"<br>
+          </li>
+          <li>This condition starts out by setting the name variable to a blank string so that the condition "name != 'your name'" is True, and the code inside the loop is executed.</li>
+          <li>This loop will run forever unless you were to literally type out "your name", when prompted to provide input.</li>
+          <li>A loop is good way to continually ask the user for input, until the information they give is valid. So if you were to ask for a user's age, you could use a
+              loop to make sure that the user does not provide an answer with a negative number, or a string like 'Abraham Lincoln'.
+          </li>
+          <li>If you were to ever write an infinite loop by setting your condition to "while True", and need to back out of the code, simply press CTRL + C, and a keyboard interupt error will stop the
+              infinite loop that will eventually crash your computer.
+          </li>
+          <li>One statement you can use inside of a loop is the "break" statement, which instantly stops your code from running.</li>
+          <li>You could change the yourName.py example to demonstrate this statement. First delete the conditions and insert "while True:", next, while still inside your block of code,
+              write an if statement that has these conditions: "if name == 'your name':", and inside of the if statement, write "break".
+          </li>
+          <li>This does not change anything about the code, it is just an example of how you could use the break statement.</li>
+          <li>Like break statements, "continue" statements are also used inside of loops.</li>
+          <li>Heres a simple program that you can write out to have an example of the continue statement:<br>"spam = 0<br>while spam < 5:<p>spam = spam + 1<br>if spam == 3:<p>continue</p>
+              print('spam is ' + str(spam))"</p>You can name this file "continue_example.py".</li>
+          <li>The output of this code is "spam is 1, spam is 2, spam is 4, spam is 5". It skips 3 because on the iteration where spam = 3, the if statement is True, and the contiue statement is executed.
+              The continue statement stops the execution and goes back to the start of the loop, so in this case, the print function in the loop is skipped.
           </li>
         </ul>
       </div>
@@ -94,6 +132,7 @@
         <h3>Section Resources:</h3>
         <ul>
           <li>Lesson 4: <a class="resources" href="https://automatetheboringstuff.com/chapter2/">Flow Control</a></li>
+          <li>Lesson 5: <a class="resources" href="http://pythontutor.com/visualize.html#mode=edit">Copy/paste code here, and it will be visualized</a></li>
         </ul>
     </div>
     </div>
