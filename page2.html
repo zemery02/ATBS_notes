@@ -128,6 +128,34 @@
           </li>
         </ul>
       </div>
+      <div id="L7">
+        <h3>Lesson Seven: For Loops</h3>
+        <ul>
+          <li>There is another type of loop, and it is known as the "for loop". Unlike the while loop, which runs so long as a condition is True, a for loop runs for a specific number of times.</li>
+          <li>You can go ahead and open a new text editor window and enter the following code, so that you can follow along and see what we're talking about:<br>"print('My name is')<br>
+              for i in range(5):<p>print('Jimmy Five Times' + str(i))"</p>You can name this file "fivetimes.py"
+          </li>
+          <li>In the first time the loop is ran through, the variable i is set to 0, due to the fact that almost all programming languages use zero-based indexing</li>
+          <li>In the next iterations, i is set to 1, 2, 3, and 4 at the top of the loop. It does not include 5 because it started at zero and when i = 5, the loop has already been run 5 times, and running it
+              while i = 5 would mean that it iterated 6 times.
+          </li>
+          <li>You could make a very simple program that adds all the numbers from 0 to 100, and the program looks like this:<br>total = 0<br>for num in range(101):<p>total = total + num</p>print(total)<br>
+              You can name this file "0through100.py".
+          </li>
+          <li>When run, you should get the answer "5050", which is indeed the sum of all the numbers from 0 to 100.</li>
+          <li>You can use a while loop in almost any situation that you could a for loop, but you would have to create the variable before you wrote the loop, and increment it at the end of your loop,
+              which is not as simple and compact as the for loop.
+          </li>
+          <li>You can have 2 arguements for the  range function. If you were to write in the IDLE window "range(10)", it would return and object that says "range(0, 10)", which is the starting and ending point of
+              this specific use of the range function. You can write something similar when using a for loop. If you wanted to not use zero-based indexing for something, you could write "for i in range(1, 6)",
+              and it would still print the thing 5 times, but this time it starts at 1, and ends at 5, which is useful for human readability.
+          </li>
+          <li>You can also use a third arguement for a for loop, which is known as a "step arguement". A step arguement is used in the event that you want to skip numbers, or count backwards. Using a step
+              arguement looks like this: "for i in range(1, 11, 4)". This output only prints 1, 5, and 9.
+          </li>
+          <li>You can use break and continue statements in for loops just the same as you can in while loops.</li>
+        </ul>
+      </div>
       <div id="secResrc">
         <h3>Section Resources:</h3>
         <ul>
