@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 3</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionThree">
+      <h2>Section Three: Functions</h2>
+      <div id="L8">
+        <h3>Lesson Eight: Python's Built-in Functions</h3>
+        <ul>
+          <li>All Python programs have a basic set of functions known as "built-in functions", and they include but are not limited to, the print function, the input function, and the len function.</li>
+          <li>Python also comes with a set of modules known as "the standard library", and it contains modules that contain specific functions. For instance the Math module has mathematic related functions, the random
+              module has functions related to generating and dealing with random numbers, and there are many more not mentioned.
+          </li>
+          <li>When you want to use one of these modules, you must use an import statment. You can do this in the IDLE window by typing "import random", and on the next line, you can now use a function from this random
+              module. In the lesson, it's instructed to type "random.randint(1, 10)", which gives us a random number between 1 and 10 (including both 1 and 10).
+          </li>
+          <li>Since randint isn't a built-in function, you must type "random." before you use any functions from the random module.</li>
+          <li>Another way you can import a module is by typing from <i>modulename</i> import *, where the "*" is equal to everything in the module. This allows you to omit the "random." before every use of a function
+              from the random module, and the many other modules included in the Python standard library.
+          </li>
+          <li>While using the second import method is easier, using the first one makes for more readable code, since you know where a function like randint is coming from.</li>
+          <li>You can use a function from the "sys" module called "exit", to terminate your program early if you need, it looks a little something like this, feel free to type this into a new text editor window if
+              you'd like to follow along:<br>"import sys<br>print('Hello!')<br>sys.exit()<br>print('Goodbye!')"<br>You can name this file "sysexit.py".
+          </li>
+          <li>You can also use third-party modules, but before you import, you must use the Pip program, which is also included in Python. You have to use the Pip program from the command line, also known as the
+              terminal.
+          </li>
+          <li>Consult the section resources part of this page to check out how to install third party modules. Now, install the pyperclip module using the instructions.</li>
+          <li>The pyperclip module allows you to copy and paste text to and from your clipboard, using the pyperclip.copy(), and pyperclip.paste() functions.</li>
+          <li>You can go ahead and import the pyperclip module in the IDLE window and type "pyperclip.copy('Hello world!')". "Hello World" is now copied to your clipboard, and you can use it whereever you'd like.</li>
+          <li>In the next line, you can type out "pyperclip.paste()" and it will copy the last thing on your clipboard, which should be "Hello World", assuming you didn't get distracted in the middle of this lesson.</li>
+
+        </ul>
+      </div>
+      <div id="secResrc">
+        <h3>Section Resources</h3>
+        <ul>
+          <li>Lesson Eight: <a class="resources" href="https://automatetheboringstuff.com/appendixa/">How to install Third-party modules with Pip</a></li>
+          <li>Lesson Eight: <a class="resources" href="https://automatetheboringstuff.com/chapter3/">ATBS E-book Chapter Three: Functions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page2.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page4.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
