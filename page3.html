@@ -18,7 +18,7 @@
           <li>Python also comes with a set of modules known as "the standard library", and it contains modules that contain specific functions. For instance the Math module has mathematic related functions, the random
               module has functions related to generating and dealing with random numbers, and there are many more not mentioned.
           </li>
-          <li>When you want to use one of these modules, you must use an import statment. You can do this in the IDLE window by typing "import random", and on the next line, you can now use a function from this random
+          <li>When you want to use one of these modules, you must use an import statement. You can do this in the IDLE window by typing "import random", and on the next line, you can now use a function from this random
               module. In the lesson, it's instructed to type "random.randint(1, 10)", which gives us a random number between 1 and 10 (including both 1 and 10).
           </li>
           <li>Since randint isn't a built-in function, you must type "random." before you use any functions from the random module.</li>
@@ -36,7 +36,50 @@
           <li>The pyperclip module allows you to copy and paste text to and from your clipboard, using the pyperclip.copy(), and pyperclip.paste() functions.</li>
           <li>You can go ahead and import the pyperclip module in the IDLE window and type "pyperclip.copy('Hello world!')". "Hello World" is now copied to your clipboard, and you can use it whereever you'd like.</li>
           <li>In the next line, you can type out "pyperclip.paste()" and it will copy the last thing on your clipboard, which should be "Hello World", assuming you didn't get distracted in the middle of this lesson.</li>
-
+        </ul>
+      </div>
+      <div id="L9">
+        <h3>Lesson Nine: Writing your own Functions</h3>
+        <ul>
+          <li>Since functions are just mini-programs inside of other programs, you can build your own using everything that you've learnt so far.</li>
+          <li>You can write the following code to create your first function:<br>"def hello():<p>print('Howdy!')</p><p>print('Howdy!!!')</p><p>print('Hello there.')</p>hello()<br>hello()<br>hello()""<br>You can name
+              this file "example.py".
+          </li>
+          <li>So the def statement only defines a function, and does not execute the code inside. This is why we typed "hello()" three times at the bottom of the document. This process is known as "calling" your
+              function. Although you don't have to write it, because it's part of Python's standard library, everytime you use the print function, you are calling it.
+          </li>
+          <li>The main purpose of functions is to group together code that is run together multiple times. If you don't do this, you'd have to copy and paste the code block everytime you need to use it. Copy and
+              pasting is generally discouraged because if you want to update the code, or if you need to squash a bug, you might have to look through a lot more code than you would have needed to if you just used
+              a function.
+          </li>
+          <li>You use arguements everytime you call the print or len functions. These arguements are always pleaced in between parenthesis. You might have noticed the parenthesis when we defined and called our hello
+              function. You can update your code to use an arguement by placing a variable name in the line inside the parenthesis where you defined the statement, for now, make the variable name, "name". Then,
+              replace everything in the block of code with one print function that reads "print('Hello ' + name)". Now you can call your function and insert a name, which might look like "hello('Zac')". There you have
+              it, your first written function can now take an arguement.
+          </li>
+          <li>It's important to note that in this context, your name arguement is known as a "parameter". To clear up any confusion, the string "Zac", that is passed in is known as an argument, while the placeholder
+              variable "name" is known as a parameter.
+          </li>
+          <li>You can use functions in between your code, just as you would a variable or any other data type. For instance, you can use the len function and create the string "hello has " + str(len('hello')) +
+              ' letters'. This function evaluates to the string "Hello has 5 letters".
+          </li>
+          <li>You can use a return statement to specify what the function should evaluate to.</li>
+          <li>To demonstrate, go ahead and open up a new text editor file and type the following code:<br>"def plusOne(number):<p>return number + 1</p>newNumber = plusOne(68)<br>print(newNumber)"<br>You can name this
+              file "plusOneExample.py".
+          </li>
+          <li>The None value is the only value in the None data type. If you were to type the statement "spam = print()", the IDLE window would return nothing, because print without an arguement evaluates
+              to the None data type. This means that every function call has a return value.
+          </li>
+          <li>If you don't use a return statement in your functions, it always returns the none value.</li>
+          <li>There are arguements known as keyword arguements that you can use in some of the functions that are in Python's standard library. There is the end and sep keywords for print. The end keyword is useful for
+              times where you have multiple print statements back to back. The print function automatically assigns a newline character after it has been executed, but you can add a second arguement at the end of your
+              string in the parenthesis that looks like: "end=''". Now the two print statements will be right next to each other with no spaces.
+          </li>
+          <li>You can also use the sep keyword to separate words or phrases that are
+              passed into a single print statement. Regularly, the statement "print('cat', 'dog', 'mouse')", would evaluate to "cat dog mouse", but if you wrote "sep=ABC" inside the parenthesis, next to 'mouse', the print
+              statement would evaluate to "catABCdogABCmouse".
+          </li>
+          <li>Most of the time you won't need to use these keyword arguements, but they can help you format the print function exactly how you want it to.</li>
         </ul>
       </div>
       <div id="secResrc">
