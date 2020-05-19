@@ -76,10 +76,34 @@
               string in the parenthesis that looks like: "end=''". Now the two print statements will be right next to each other with no spaces.
           </li>
           <li>You can also use the sep keyword to separate words or phrases that are
-              passed into a single print statement. Regularly, the statement "print('cat', 'dog', 'mouse')", would evaluate to "cat dog mouse", but if you wrote "sep=ABC" inside the parenthesis, next to 'mouse', the print
-              statement would evaluate to "catABCdogABCmouse".
+              passed into a single print statement. Regularly, the statement "print('cat', 'dog', 'mouse')", would evaluate to "cat dog mouse", but if you wrote "sep=ABC" inside the parenthesis, next to 'mouse', the
+              print statement would evaluate to "catABCdogABCmouse".
           </li>
           <li>Most of the time you won't need to use these keyword arguements, but they can help you format the print function exactly how you want it to.</li>
+        </ul>
+      </div>
+      <div id="L10">
+        <h3>Lesson Ten: Global and Local Scopes</h3>
+        <ul>
+          <li>In Python, you can have 2 separate variable of the same name, and have them work on their own if one and only one of them is placed into a function.</li>
+          <li>This is an example of global and local scopes. A local variable is a variable declared inside of a function, and a function that is on it's own outside all functions is part of the global scope.</li>
+          <li>All variables belong to the global or local scope. They must be one or the other, they cannot be both, and they cannot be neither.</li>
+          <li>Since all of the variable declared inside of a function are destroyed upon a function giving a return statement, you should think of variables inside of a function as temporary.</li>
+          <li>Some important things to remember when using variables inside and out of functions are:
+            <ol>
+              <li>Code written in the global scope does not have access to any local variables</li>
+              <li>Code written inside a function, in a local scope, does have access to any global variables declared</li>
+              <li>Code in one functions local scope cannot access variables declared in another function's local scope. Local variables are exclusive to the function it was declared in</li>
+              <li>You can use the same names for a variable so long as it is in a different scope</li>
+            </ol>
+          </li>
+          <li>So anything variable declared in a function is part of that function's local scope. If you have a variable of the same name on both scopes, or in 2 different functions, the variable declared inside the
+            same function will take precedent.
+          </li>
+          <li>If you want to alter the data stored inside of a global variable from the inside of a function, you'll have to use a global statement.</li>
+          <li>A global statement is jus the word "global", followed by the variable name that you want to alter from inside the function.</li>
+          <li>The benefit to having a local scope is that if you need to debug your code, you can limit it to a specific function if the problem is coming from inside of a function.</li>
+          <li>Because of all of this, we can treat functions like black boxes in the sense that, everything inside of a function only matters to that function, and the only real thing that matters is the return value.</li>
         </ul>
       </div>
       <div id="secResrc">
