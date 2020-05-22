@@ -40,3 +40,7 @@ a.nextPage:hover, a.nextPage:active, a.prevPage:hover, a.prevPage:active {
 p {
   text-indent: 24px;
 }
+
+.doubleIndent {
+  text-indent:48px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 4</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionFour">
+      <h2>Section Four: Handling Errors with try/except</h2>
+      <div id="L11">
+        <h3>Lesson Eleven: Try and Except statements</h3>
+        <ul>
+          <li>With the knowledge you have right now, if you were to come across an error, your entire program would crash.</li>
+          <li>This lesson will show you how to have your program detect errors, hendle them, and then continue to run.</li>
+          <li>You can input the following code to follow along with the lesson:<br>"def div42by(divideBy):<p>return 42 / divideBy</p>print(div42by(2))<br>print(div42by(12))<br>print(div42by(0))<br>print(div42by(1))"
+              <br>You can name this program "try-except_example.py"<br>
+          </li>
+          <li>If you run this code, you will get the first 2 answers, 21.0, and 3.5, but then you will get an error called "ZeroDivisionError". This is because it is impossible to divide by zero, and so the program
+              spits out an error instead of spazzing out.
+          </li>
+          <li>Now you can modify your code to look like this:<br>"def div42by(divideBy):<p>try:</p><p class="doubleIndent">return 42 / divideBy</p><p>except ZeroDivisionError:</p><p class="doubleIndent">
+              print('Error: You tried to divide by zero.')</p>print(div42by(2))<br>print(div42by(12))<br>print(div42by(0))<br>print(div42by(1))"<br>Now you can resave the program under the same name.<br>
+          </li>
+          <li>Now the output prints the error message, and since there is nothing to return, it still prints "None", and then it continues on and prints 42.0, which is the answer to 42 / 1.</li>
+          <li>You can also omit the type of error in the except statement, and it will run exactly as it did before.</li>
+          <li>Here's another example of a try/except statement, feel free to follow along:<br>"print('How many cats do you have?')<br>numCats = input()<br>try:<p>if int(numCats) >= 4:</p><p class="doubleIndent">
+              print('That is a lot of cats.')</p><p>else:</p><p class="doubleIndent">print('That is not that many cats.')</p>except ValueError:<p>print('Error: you did not enter a number.')"<br> You can name this
+              file "ifElse_try-except_example.py"<br>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
