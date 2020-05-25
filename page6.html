@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 6</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionSix">
+      <h2>Section Six: Lists</h2>
+      <div id="L13">
+        <h3>Lesson Thirteen: The List Data Type</h3>
+        <ul>
+          <li>A list is a value that contains values. The values it stores are stored in an ordered sequence. The values it stores are often referred to as items.</li>
+          <li>Just like a string that begins and ends with quotes, a list begins and ends with square brackets, "[]".</li>
+          <li>The items in the list are separted by commas, which is known as being "comma-delimited".</li>
+          <li>An example for a list could look like this: "['cat', 'bat', 'rat', 'elephant']". When this is entered into the IDLE window, it will return everything you typed, still inside brackets and quotes.</li>
+          <li>You can of course stores lists inside of a variable, and when typed in the IDLE window, it returns the list just as it would if you typed the full contents of whatever is stored inside the variable.</li>
+          <li>To access a specific item, or "index", of a list, you use the name of the variable, followed by square brackets and the number of the item, using zero-based indexing.</li>
+          <li>For example, you could have "spam = ['cat', 'bat', 'rat', 'elephant']", and then in the next line, write spam[0], and it would return 'cat'.</li>
+          <li>You can also have a list inside of another list. You could write spam1 = [['cat', 'bat'], [10, 20, 30, 40, 50]]. If you entered "spam[0]" it would return the entire first list that contains 'cat' and 'bat'.</li>
+          <li>To access an item in a list inside of another list, you just write another index, so if you wanted to just print 'bat', from the last example, you would write "spam[0][1]", and it would return 'bat'.</li>
+          <li>You can also use negative indexes to count backwards in a list. The -1 index is the last item in the list, and -2 is the next to last item, and so on.</li>
+          <li>You can also use indexes just as you would a normal variable. You could concatenate a string to say that "The elephant is afraid of the bat", by using spam and writing
+              "print('The ' + spam[-1] + ' is afraid of the' + spam[1] + '.')".
+          </li>
+          <li>You can grab multiple list items at once by using a "slice", as opposed to an index.</li>
+          <li>A slice is also between square brackets, and the starting and ending place is separated by a colon. So if you were to type "spam[1:3]" it would result in an output of ['bat', 'rat'], because slices go
+              up to, but not include the ending number.
+          </li>
+          <li>Just as you can reassign data inside of a variable, you can also use indexing to reassign data inside of a list. To do this, just type "<i>variablename[desiredindex] = desireddata</i>".</li>
+          <li>You can also use slices to reassign data in a list.</li>
+          <li>You can omit the starting number of a slice if you want to start at index 0. You can do the same with the ending number if you want to go until the end of the list.</li>
+          <li>The del statement is used to delete items from a list. Just use the "del" keyword, followed by the index or slice that you want to remove from the list. You can think of the del statement as the
+              opposite to the assign statement.
+          </li>
+          <li>There are many similarities between strings and lists, in fact, here are some examples:
+            <ol>
+              <li>You can pass in a list to the len function, and it will return the number of items in a list.</li>
+              <li>You can concatenate lists using the plus operator. So if you have 2 lists that contain, [1, 2, 3], and [4, 5, 6], it would combine to be [1, 2, 3, 4, 5, 6].</li>
+              <li>You can also replicate items in a list using "*". If you wrote "[1, 2, 3] * 2" in the IDLE window, it would have an output of [1, 2, 3, 1, 2, 3].</li>
+            </ol>
+          </li>
+          <li>There is a list function that lets you pass in a string, and returns a list with each of the letters in the string as a single item in the list.</li>
+          <li>You can use the in and not in statements to check if a value is inside of a list. To do this, write the value you are looking for, followed by the in, or not in keyword, and then the list that you want
+              to be checked. This evaluates to True of False based on the outcome of the statement.
+          </li>
+        </ul>
+      </div>
+      <div id="secResrc">
+        <h3>Section Resources</h3>
+        <ul>
+          <li>Lesson Thirteen: <a class="resources" href="https://automatetheboringstuff.com/chapter4/">ATBS E-book Chapter Four: Lists</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page5.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page7.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>

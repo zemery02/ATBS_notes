@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 5</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionFive">
+      <h2>Section Five: Writing a Complete Program: Guess the Number</h2>
+      <div id="L12">
+        <h3>Lesson Twelve: Writing a "Guess the Number" Program</h3>
+        <ul>
+          <li>Today, we will build a program that asks for your name, and asks you to guess what random number it's thinking of.</li>
+          <li>We already have all the tools and knowledge we need for this program, but this lesson can still be tricky (without help) to put together.</li>
+          <li>This program will also only give you 6 guesses as to what random number it is thinking of.</li>
+          <li>The output of the program starts out by introducing itself, and asking for your name. Once you give it some input, it will explain that it is thinking of a number between 1 and 20, and then asks you to guess it.
+              From then, it will enter a loop of asking what your guess is and then telling you if it is too high or too low. If you guess correctly, it congratulates you, and tells you how many guesses it took. If you
+              fail, it will end and tell you the random number it was "thinking" of.
+          </li>
+          <li>The first few lines of the program start out like this:<br># This is a Guess the Number game.<br>import random<br>print('Hello, What is your name?')<br>name = input()<br>
+              print('Well, ' + name + ', I am thinking of a number between 1 and 20')<br>secretNumber = random.randint(1, 20)<br><br>
+          </li>
+          <li>First, we insert a comment describing what the program does, in this case it is a Guess the Number game. Then, we import the random module so that we can generate a random number between 1 and 20.
+              Next, we ask for the users name, and then store the input data in a variable called "name". Finally, it explains the premise of the game, and generates the random number between 1 and 20.
+          </li>
+          <li>The next few lines will show how to guess and offer clues to the user as to whether the number they guessed is too high or too low, the code looks like this:
+              <br><br>for guessesTaken in range(1, 7):<p>print('Take a guess')</p><p>guess = int(input())</p><p>if guess &lt; secretNumber:</p><p class="doubleIndent">print('Your guess is too low.')</p><p>elif guess >
+              secretNumber:</p><p class="doubleIndent">print('Your guess is too high').</p><p>else:</p><p class="doubleIndent">break # This condition is the correct guess</p>
+          </li>
+          <li>For this next part of the program, we start by declaring a for loop that starts at one, and run up to, but not including a 7th time. We ask the user to take a guess and store the input data in a variable
+              named "guess". Next we have an if statement that lets the user know that their guess is too low if the condition is True. Then we have an elif statement that lets the player know if their guess is too high
+              if the condition is True. Finally, we break out of the statement if all the other conditions are False, which in this case means that the guess is equal to the secretNumber variable.
+          </li>
+          <li>The last part of the program looks like this:<br>if guess == secretNumber:<p>print('Good job, ' + name + '! You guessed my number in ' + str(guessesTaken) + ' guesses!')</p>else:<p>
+              print('Nope. The number I was thinking of was ' + str(secretNumber))</p>
+          </li>
+          <li>You should run the program just to test it, and if everything runs as it should, congratulations! You just wrote your first Python program! You can save it under the file name "guess.py".</li>
+          <li>If you run into an error, feel free to look over this lesson. Another thing you can do is print the secretNumber and test your program to make sure everything is working. For example, right before you
+              write the for loop, you can write "print('DEBUG: The secret number is ' + str(secretNumber))". Just make sure to delete it once everything has been tested and you're ready to use the program for real.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page4.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page6.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
