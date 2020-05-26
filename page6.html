@@ -50,6 +50,37 @@
           </li>
         </ul>
       </div>
+      <div id="L14">
+        <h3>Lesson Fourteen: for Loops with Lists, Multiple Assignment, and Augmented Operators</h3>
+        <ul>
+          <li>Python considers the range object that spits out when you use the range function in the IDLE window to be very similar to a list. In fact, you can replace the range keyword in a for loop with a list if
+              you really wanted to.
+          </li>
+          <li>You can actually pass in the range function into the list function and it would output a list that spells out the range functions output. For example, you could write "list(range(4))", into the IDLE
+              window, and the output would be "[0, 1, 2, 3]".
+          </li>
+          <li>This can be helpful for making big lists. Say you want to have a list that counts by 2, starting at 0, and ending at 100, you could pass in "range(0, 100, 2)" into the list function and it would give
+              you exactly what you need way faster than you could ever type it out.
+          </li>
+          <li>Another thing that is common is to pass in the len function into the range function. For instance, if you had a for loop, and a variable with a list, you could have the range function go by the the
+              amount of items in the vairable length.This can come in handy if you ever need to use the i variable for the index of a list, as well as where exactly you are in the loop. To use the variable i
+              for the index of the list, just use the name of the list variable, followed by "i" in squarebrackets. If you ever need to see what is happening at what point in the loop, you can just pass the i
+              variable into the str function as you formulate a print statement.
+          </li>
+          <li>If you have a large list, and you need to assign each item in the list to a variable, Python makes it easy by allowing you to assign multiple variables to one single list. For example, you could
+              have a list variable named dog that looks like this: ['loyal', 'wholesome', 'cute']. You can assign each of those items to a variable by simply typing "bestTrait, disposition, looks = dog".
+          </li>
+          <li>You can also use multiple value on the right side of the assignment statement, it does not just have to be a list for Python to iterate through.</li>
+          <li>This can be used for "variable swapping", which is when you have 2 predefined variables and you need to swap the values inside of them. If you have 2 variables called "a" and "b", you could simply write
+              the statement "a, b = b, a".
+          </li>
+          <li>The last Python shortcut we'll go over in this lesson is the augmented assignment operator. When coding, it is very common to want to reassign a variable based on it's past value. For instance,
+              if you just want to add one to a variable, you can do that by typing "<i>variablename = variablename</i> + 1". With augmented assignment operators, you don't need to type the variable name twice, instead
+              you can just write "<i>variable name</i> += 1", and it will do the same exact thing.
+          </li>
+          <li>You can use the augmented assignment operators with the addition, subtraction, multiplication, division, and the modulous operators.</li>
+        </ul>
+      </div>
       <div id="secResrc">
         <h3>Section Resources</h3>
         <ul>
