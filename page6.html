@@ -81,6 +81,36 @@
           <li>You can use the augmented assignment operators with the addition, subtraction, multiplication, division, and the modulous operators.</li>
         </ul>
       </div>
+      <div id="L15">
+        <h3>Lesson Fifteen: List Methods</h3>
+        <ul>
+          <li>In this lesson, we will introduce methods, which are the same as functions, but they are attached to, or only work with, a specific value/data type.</li>
+          <li>The first method we'll go over is the index() method. If you have a list stored in a variable, you can use the index method to see the index of a specific item in that list. So if you have a variable
+              called "spam", and it's assigned a list, and that list's first item is "hello", you can write spam.index('hello'), and that will return zero. If you have a duplicate value in your list, the index()
+              method will return the index of the first instance of the item in the list.
+          </li>
+          <li>If you need to add an item to a list, you can use the append(), and insert() methods.</li>
+          <li>The append() method adds the item to the end of the list.</li>
+          <li>The insert() method allows you to insert an item wherever you choose. Because of this, the insert() method uses 2 arguements, the first arguement is the index of the new item, and the second arguement
+              is the new item. The previous item at the index when using the insert() method and everything after that item, will just be bumped up one index.
+          </li>
+          <li>When modifying or adding something to a list, you don't want to say that you're variable name equals the variable name dot method(), because then that variable will return the none data type.</li>
+          <li>To remove an item in a list, you can use the remove() method. Using the remove() method doesn't require you to know where the item is, in terms of index. You can just write
+              <i>variablename.remove('itemname')</i>. Like the index() method, remove() only remove the first of a duplicate item in a list. If you want to remove an item in the list, but only know the index, you can
+              use the del statement to remove that item. If you want the first item of a list called "spam" removed, you can just write "del spam[0]".
+          </li>
+          <li>The next method is the sort() method. This method can put numbers and strings in order. If you have a list called spam with numbers in it, youc an write "spam.sort()" and it will sort your numbers
+              in order from least to greatest. If your list has strings in it, you can use the sort() method to arrange the strings in alphabetical order. Since Python doesn't know which value should be prioritzed,
+              you cannot use the sort() method with a list that contains both strings and numbers.
+          </li>
+          <li>You can use a reverse keyword, which must be assigned the boolean value of True, and the sort() method will return the list in reverse alphabetical order, or if your list had numbers, it would return
+              them in order from greatest to least.
+          </li>
+          <li>Python uses ASCII to sort values, so if you had items in your list that had uppercase and lowercase letters, it would sort them in a way that uppercase letters came before lowercase letters, even if
+              the uppercase letter comes after the lowercase one in the alphabet. If you need the list to be sorted in true alphabetical order, you can pass in the arguement "key = str.lower" into the sort() method.
+          </li>
+        </ul>
+      </div>
       <div id="secResrc">
         <h3>Section Resources</h3>
         <ul>
