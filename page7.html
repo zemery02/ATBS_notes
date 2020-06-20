@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 7</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionSeven">
+      <h2>Section Seven: Dictionaries</h2>
+      <div id="L17">
+        <h3>Lesson Seventeen: The Dictionary Data Type</h3>
+        <ul>
+          <li>A dictionary is like a list, in the fact that it stores many different types of data, and it can hold multiple data types at once as well.</li>
+          <li>A dictionary uses a key-value pair, to hold this information. A key is much like an index, where when you refer to the key, it acts as the information that is stored within the key.</li>
+          <li>In Python, dictionaries are stored inside curly braces. Dictionaries, like all data types, can be stored inside variables.</li>
+          <li>Here's an example dictionary that you can write in the IDLE window: "myCat = {'size': 'fat', 'color': 'gray', 'disposition': 'loud'}"</li>
+          <li>You may have noticed, but all key-value pairs are separated by commas. For this particular dictionary, the keys are 'size', 'color', and 'disposition', while the values associated with the
+              keys are 'fat', 'gray', and 'loud'.
+          </li>
+          <li>You can access a keys value just like you would with a list's index. For this particular variable, if you wanted the value of the 'size' key, you would type: "myCat['size']". The value 'fat'
+              would then be displayed onto the IDLE window.
+          </li>
+          <li>Lists can also have integers as keys, and they can be whatever you want them to be, they don't have to start at zero.</li>
+          <li>Unlike lists, order of key-value pairs doesn't matter. If you wrote a list, and it's values were mixed up, but still the same, using the equal to operator would evaluate to False because for lists,
+              order matters. If you had a dictionary with the same key-value pairs, but mixed up, using the equal to operator would evaluate to True.
+          </li>
+          <li>Dictionary might be a bad name on account of the fact that it doesn't matter the order of the keys in it, but you can relate the Python dictionary to a real one by thinking of the key-value pairs
+              as the word and it's definition. If you know the word, you can access the defintion, if you know the key, you can access the value.
+          </li>
+          <li>You can use the in and not in operators to determine if a key is in a dictionary or not. This can be useful in attempting to prevent a KeyError which is what you get when you refer to a key in a
+              dictionary that doesn't exist.
+          </li>
+          <li>Like lists, dictionaries are immutable, meaning that if you store them in a variable, the variable keeps track of a number associated with the dictionary, not the information inside the
+              dictionary itself.
+          </li>
+          <li>There are 3 methods that you can use to access various information about a  dictionary.
+            <ol>
+              <li>The first is the keys method which looks like this: "list(<i>variablename</i>.keys())". This method will return the keys held inside the dictionary.</li>
+              <li>The next method is the values method, which is the same as the last example, except you swap the word "keys" for "values". This method will return all the values inside of a dictionary.</li>
+              <li>The final method is the items method, and it is also the same as thelast 2, except the word before the last parenthesis is "items". This method will spit out a list with 2-item tuples(which
+                  is basically the same thing as a list) as the items. Inside the tuples are the key and value pairs, where the key is always listed first, and the value always listed second.
+              </li>
+            </ol>
+          </li>
+          <li>You can use for loops to iterate through the output of each method. Just simply write "for k/v in <i>variablename</i>.keys():<p>print(k/v)</p>"</li>
+          <li>If you want to use a for loop on the items method, simply use 2 variable separated by a comma for both the declaration of the for loop, and when printing the for loop.</li>
+          <li>Python offers a get() method, to help you avoid KeyErrors and the need to write tedious if statements. The get method looks like this: "<i>variablename</i>.get('<i>keyname</i>, <i>defaultvalue</i>')"</li>
+          <li>There is also a method called setdefault(), which is essentially the opposite of the get method. The setdefault() method is used to set a value for a key, if it doesn't already exist, whereas the get()
+              method uses the value associated with a key, and if it doesnt exist, it uses the default value.
+          </li>
+          <li>You can use the setdefault() method to create a program that counts the occurences of a letter in a string. The program looks like this:
+              "message = 'It was a cold bright day in April, and the clocks were striking thirteen.'<br>count = {}<br><br>for character in message.upper():<p>count.setdefault(character, 0)</p><p>count[character] =
+              count[character] + 1</p>print(count)". You can save this program as "characterCount.py".
+          </li>
+          <li>This program starts with a string variable, which could actually be set to be an input function to make it a little more interactive. Then we initialize the dictionary and name it count. Next we create
+              a for loop, and for each iteration, if there's a character that hasn't appeared yet, it will set the default to 0, and then add one upon each appearance in the string.
+          </li>
+          <li>You can use the pprint module to make the output of this program much more organized. Simply write import pprint at the top of the file, and then where it says "print(count)", replace it with "pprint.
+              pprint(count)", and the output will be organized in a column and ordered alphabetically.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="secResrc">
+      <h3>Section Resources</h3>
+      <ul>
+        <li>Lesson Seventeen: <a class="resources" href="https://automatetheboringstuff.com/chapter5/">ATBS E-book Chapter 5: Dictionaries and Structuring Data</a></li>
+      </ul>
+    </div>
+  </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page6.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page8.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>

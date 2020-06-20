@@ -111,6 +111,24 @@
           </li>
         </ul>
       </div>
+      <div id="L16">
+        <h3>Lesson Sixteen: Similarities Between Lists and Strings</h3>
+        <ul>
+          <li>While you can use things like the "in" function, slicing and indexing on strings, you cannot change values of a string using indexing. For example, you could write a name variable, and then try to
+              change the first letter by reassigning a value to name[0], but this will result in an error, you must redefine the entire string value to change it.
+          </li>
+          <li>If you want to change something about a string, you can do so by making a new variable and storing the parts that you want to keep as slices, and concatenating those parts with new strings that
+              have been changed to your liking.
+          </li>
+          <li>When you assign one variable to another, and then change one of those variables, the other variable stays the same, it doesnt change unless you tell it to. However, with list values, if you assign
+              one list variable to another, and then change one of the lists, both will be updated.
+          </li>
+          <li>To make it so that you can change one list without changing the other, you can use the copy module's deepcopy function. So if you have a list value called spam and you want to make a few changes to it,
+              but keep the original, you can assign a diiferent variable the value of copy.deepcopy(spam), and now you have a completely separate yet equal list that you can change to your heart's desire.
+          </li>
+          <li>You can also use the backslash character to continue writing a statement or string on a different line.</li>
+        </ul>
+      </div>
       <div id="secResrc">
         <h3>Section Resources</h3>
         <ul>
