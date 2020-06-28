@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 8</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionEight">
+      <h2>Section Eight: More About Strings</h2>
+      <div id="L19">
+        <h3>Lesson Nineteen: Advanced String Syntax</h3>
+        <ul>
+          <li>As you may know, if you were to type a string with an apostrophe, and used single quotes to begin and end the string you would get a syntax error. You can avoid this by beginning and ending
+              the string with double quotes.
+          </li>
+          <li>If you need to use both in your string, then you'll need to use an escape character. An escape character lets you use a charcter that is otherwise impossible to implement into a string.</li>
+          <li>Escape characters begin with the backslash character,"\", followed by a letter associated with the character you'd like to end up with.</li>
+          <li>You can escape a single quote by writing "\'" in your string. Spacing is not affected, so if your using an apostrophe to show ownership, you can put the 's' directly after the single quote
+              just like you normally would. You can check out a full list of escape characters in the section resources guide for this lesson.
+          </li>
+          <li>You can use raw strings to have escape characters appear just as they appear when you type them. Raw strings look exactly the same as a regular string, it just has a lower-case r in the front
+              of the beggining quote. This can be helpful for writing a string with multiple backslashes.
+          </li>
+          <li>You can also use triple quotes(double or single), to use escape characters literally, and you can create a newline character just by hitting the enter key. Python is intelligent enough to know
+              that until you type the closing three quotes.
+          </li>
+          <li>If you were to store a multi-line string(the string type in the bullet above) in a variable, and then type the variable's name into the IDLE window, it would output a string with escape characters
+              wherever you used the enter key or any other type of escape character.
+          </li>
+          <li>You can treat each character in a string just as you would handle an item in a list. If you had a variable called spam and inside it was the string "Hello World!", and you typed spam[0] into the
+              IDLE window, it would output the letter H, because thats the character at the first index of the string. You can also use slices with a string. The in and not in functions also work with a string
+              variable, just remember that this function is case sensitive.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="secResrc">
+      <h3>Section Resources</h3>
+      <ul>
+        <li>Lesson Nineteen: <a class="resources" href="https://automatetheboringstuff.com/chapter6/">ATBS E-book Chapter 6: Manipulating Strings</a></li>
+      </ul>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page7.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page9.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
