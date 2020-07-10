@@ -37,6 +37,56 @@
           </li>
         </ul>
       </div>
+      <div id="L20">
+        <h3>Lesson Twenty: String Methods</h3>
+        <ul>
+          <li>In this lesson we will cover a few different string methods, mich like lesson 15 where we went over several different list methods.</li>
+          <li>Keep in mind that string methods will return a new string, instead of modifying a string already stored in a variable. This is because strings are immutable.</li>
+          <li>The first 2 methods we'll go over is the upper() and lower() methods. As you might've guessed, the upper() and lower() methods will make every index of the string either upper or lowercase depending
+              on which method you use.
+          </li>
+          <li>Since strings are immutable, using the upper() and lower() methods do not alter the contents of the string variable. If you did want to make a string variable all uppercase or
+              lowercase, you would have to write "<i>variablename</i> = <i>variablename</i>.upper()".
+          </li>
+          <li>These methods can be useful for writing a if statement based on user input. If you wanted to get a yes or no
+              response, you could set th einput variable to all upper or lowercase so that no matter what letters they did or didn't capitalize, it would still recognize the word.
+          </li>
+          <li>The next 2 methods are the isupper() and islower() methods. These return a boolean value based on whether or not the letters in a string are all upper or lowercase. Blank strings return False for both
+              methods. You can strig methods together; so for instance, you coudl write "Hello.upper().isupper()", and it would return True.
+          </li>
+          <li>There are several different string methods that start with "is". There's isalpha(), which returns True if there are only letters in a string; isalnum(), which returns True if the string consists of
+              both letters and numbers; isdecimal() which returns True if a string only consists of numbers; isspace(), which returns True if a string is only whitespace; and finally, istitle() which returns
+              True if the string only consists of titlecase. Titlecase is when you have all of your words' first letter capitalized followed by only lowercase until the next word. Like the upper() and lower()
+              methods, ther is a title() method that capitalizes the first letter of each word in a string.
+          </li>
+          <li>You can also use methods on string indexes. So if you wanted to pick out an index of a string where whitespace existed, and used the isspace() method, it would return True.</li>
+          <li>The next 2 methods are startswith() and endswith(). You can pass in anything from the beginning of a string into the startswith() method and it woudl return True; it could be the first letter, the first
+              word, or even the entirety of the string, so long as you include the first letter of the string. Similarly, the endswith() method returns True so long as you include the last character in the string.
+          </li>
+          <li>The join() method joins together a list of strings you pass through the method, and you can preface the method with a string thats used to separate the items in the list. For example, you could
+              write: ' '.join(['cat', 'bat', 'rat']). the output of this would be a string that contained the words "cat", "bat", and "rat" all separated by a sigle whitespace. You can also use newline characters
+              the separate the items, although it will only appear if you pass the join statement into the print function.
+          </li>
+          <li>The split() method outputs a list where each item is a word in a string that prefaces the ".split()" part of the statement. You can also pass in characters into the split() method to split the
+              characters on a specific character rather than a whitespace. So for example: 'Hello world'.split('o'), would output ['Hell', 'w', 'rld'].
+          </li>
+          <li>The ljust() and rjust() methods will add as many whitespaces and necessary to the left or right of a string to make it the length of the integer passed in. That may have been confusing so here's
+              an example: 'Hello'.rjust(10). This will output '     Hello'; now the length of the string is 10. You can also pass in a second arguement that specifies the fill character so that it isn't just whitespace.
+          </li>
+          <li>There is also a center method that places the text in the center rather than to the left or to the right.</li>
+          <li>The strip(), lstrip(), and rstrip() methods all remove whitespace from a string. Say you stored a string in a variable and used a ljust, rjust, or center method in the declaration, you could use the strip
+              method to take away all the whitespace from that string, or you could just remove all the whitespace from the left or right of the text. This doesn't modify the string variable, it just returns a brand
+              new string.
+          </li>
+          <li>Of course you can also pass in any character(s) you want into the split method to remove that/those character(s).</li>
+          <li>The replace() method takes 2 arguements, what to look for and replace, and what to replace it with. For example, you could write into the IDLE window:<br>spam = 'Hello There!'<br>
+              spam.replace('There', 'World'), and it would output, a new string that says "Hello World!". Again, this is a new string, but it is not what is stored inside the variable now.
+          </li>
+          <li>The pyperclip module has copy and paste methods. The copy() method takes a string arguement and copies the string onto your computer's clipboard. The paste() method pastes whatever the most recent item from
+              your clipboard was into the IDLE window.
+          </li>
+        </ul>
+      </div>
     </div>
     <div id="secResrc">
       <h3>Section Resources</h3>
