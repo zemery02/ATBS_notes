@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 9</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionNine">
+      <h2>Section Nine: Running Programs from the Command Line</h2>
+      <div id="L22">
+        <h3>Lesson Twenty-Two: Launching Python Programs from Outside IDLE</h3>
+        <ul>
+          <li>You can run progrmas from the command line, which can make it easier to run scripts and programs.</li>
+          <li>First thing you'll want to do in your program is write a shebang line. The shebang line will be different for each OS, so refer to the section resources to find the correct one for your OS.</li>
+          <li>The shebang line just lets the py.exe program know which version of Python to run.</li>
+          <li>One thing you might want to do is create a new folder for your code inside the users folder, found within the C: drive. This will allow for easy access to the code you want to run.</li>
+          <li>Feel free to make a simple python file with your appropiate shebang line, and then follow along to run it in the command line.</li>
+          <li>If you happen to run on Windows, you can press the Win+R key, type cmd and hit enter. From there type "py.exe", followed by the entire file path to the prgram you want to run. Feel free to use
+              the tab key to autocomplete the steps along the way.
+          </li>
+          <li>You can also run your program straight from the Win+R window, by typing everything the same as you did before, except you can omit the .exe part at the start.</li>
+          <li>If you tried this, you might have noticed that it wasn't very effective, because the window closed as soon as soon as the program was done running.</li>
+          <li>Windows has a pre-installed pause.exe file that doesn't do anything until a user hits a key. We can use batch files to add the pause.exe to the end of any programs we'd like to run so that
+              they're not just a flash of light on the screen.
+          </li>
+          <li>You can write a batch file in the built in text editor that comes with Python. For the first line of your batch file, you can write "@py" followed by the full file path to the file you want
+              to run. At the end, write a percent sign followed by an asterisk without a space, then hit enter to go to a new line. On the next line, type "@pause".
+          </li>
+          <li>The at sign tells the command line not to show this text on screen when the program is run. The percent-asterisk tells the command line to forward any command line arguments into the python
+              program being run. Command line arguements will be explained a little bit later.
+          </li>
+          <li>Now you can save the file as "<i>filename</i>.bat". Make sure to change the file type to all files so it actually gets saved as a batch file.</li>
+          <li>Now if you were to type out the full file path to the batch file in the Win+R window, it will display the message or program and then the pause prgram will keep it running until you hit a
+              key to close the program.
+          </li>
+          <li>You can run the program by just typing the file name, even without the extension, by adding the folder you created to the PATH enviroment variable, which is like a list of variables for
+              your OS. The PATH variable is a list of folders to check when someone types in the name of a folder without any context.
+          </li>
+          <li>To do this, go to settings and type "advanced system settings" into the search bar. When the window pops up, click on the button that says "Enviroment Variables...". From there find the
+              Path folder in the system variables. Then click edit, now click new and type the full file path to the folder you created with the python scripts you want to run.
+          </li>
+          <li>Now you can click ok through all the windows yourve opened, and now you can run programs in that file just by typing the file name into the Win+R window.</li>
+          <li>Each word you type into the Win+R window is known as a command line argument. You can display each argument in a list by typing import sys at the top of your file and then "print(sys.argv)"
+              somewhere in the file. Once you run the file, it'll display a list of the arguments placed into the command line when the program was run. This is where the "%*" comes into the picture when
+              writing a batch file.
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="secResrc">
+      <h3>Section Resources</h3>
+      <ul>
+        <li>Lesson Twenty-Two: <a class="resources" href="https://automatetheboringstuff.com/appendixb/">Appendix B: Running Programs</a></li>
+        <li>Lesson Twenty-Two: <a class="resources" href="https://automatetheboringstuff.com/appendixb/#calibre_link-3730">Appendix B: Running Python Programs on OS X and Linux</a></li>
+      </ul>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page8.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page10.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
