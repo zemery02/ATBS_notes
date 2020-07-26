@@ -42,5 +42,9 @@ p {
 }
 
 .doubleIndent {
-  text-indent:48px;
+  text-indent: 48px;
+}
+
+ul {
+  line-height: 250%
 }

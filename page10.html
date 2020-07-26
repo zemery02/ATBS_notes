@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta charset="utf-8">
+    <title>Automate the Boring Stuff: A Python Tutorial, Section 10</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;">Automate the Boring Stuff: A Python Tutorial</h1>
+    <h2 style="text-align:center;">Notes by Zac Emery</h2>
+    <div id="sectionTen">
+      <h2>Section Ten: Regular Expressions</h2>
+      <div id="L23">
+        <h3>Lesson Twenty-Three: Regular Expression Basics</h3>
+        <ul>
+          <li>Text and pattern recognition, similar to the find and replace functions of a Word document are very common concepts needed for programs. The problem is that making this pattern recognition can be
+              incredibly lengthy. Regular expressions can be very useful to save time instead of writing out a whole bunch of code for your specific situation. I won't show it here, but I encourage you to check
+              out the lesson to see how large the program is just to recognize a phone number in a string.
+          </li>
+          <li>So here I will provide a step-by-step guide that follows along with the lesson and show you how to use regular expressions. First thing you'll want to do is import the re (regular expressions)
+              module at the top of your file.
+          </li>
+          <li>For the next step make a variable named "phoneNumRegex", and store "re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')". The compile function goes through and creates an object and places in things that match what you're
+              searching for. Inside the parenthesis we use a raw string, which is like a string, but it does not adhere to the escape characters due to the large amount of slashes used within raw strings. Inside the raw
+              string, we use '\d' to identify that we're searching for digits, and we also use the dash character to display where we expect to see a dash inside of a phone number.
+          </li>
+          <li>On the next line we can use the .search() function to search a string for the pattern we just made. We can search a simple string, and store it in a variable called message, here's one you can copy-paste:
+              'Call me at 415-555-1011 tomorrow, or at 415-555-9999 on my office line'. Now just input the message variable inside the .search() function. The phoneNumRegex variable should precede the .search() function.
+          </li>
+          <li>The search function will output a match object, so you can store the previous line in a variable called mo. On the next line, we can use the .group() function which outputs text of whatever's inside of the
+              match object. For this line we can use the print function and inside type 'mo.group()'. When run, this will display only the first phone number in the example string.
+          </li>
+          <li>To find all of the phone numbers in the string, you can replace the search function with the findall function, which displays all the results in a list value. You can also replace the message variable inside
+              the findall function with the string if you'd like.
+          </li>
+          <li>Here's the final program written out, just to show how much simpler it is to use regular expressions (if you checked out the original program within the lesson):<br>'import re<br><br> phoneNumRegex =
+              re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')<br>print(phoneNumRegex.findall('Call me at 415-555-1011 tomorrow, or at 415-555-9999 for my office line'))'.
+          </li>
+        </ul>
+      </div>
+      <div id="L24">
+        <h3>Lesson Twenty-Four: Regex Groups and the Pipe Character</h3>
+        <ul>
+          <li>You can separate parts of the pattern you're searching for by using parenthesis when setting up the pattern using the .compile() function. This separation is known as 
+              creating a group.
+          </li>
+          <li>For instance, if you wanted to create a group of just the area code, and also group the rest of the phone number in another  group, you could do so by typing: 
+              "phoneNumRegex = re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')".
+          </li>
+          <li>Now if you store the search function call in a matched object varible, you can use the group function to access just the important parts of the matched object. Here's 
+              an example: "mo = phoneNumRegex.search('My number is 415-555-4242')<br>mo.group(1)<br>mo.group(2)<br>mo.group()".
+          </li>
+          <li>The results for mo.group(1) should be just the area code of the phone number, mo.group(2) should be the rest of the phone number, and mo.group should be the whole thing.</li>
+          <li>If you need to search for a literal parenthesis, you can write a compile statement that looks like this: "phoneNumRegex = re.compile(r'\(\d\d\d\) \d\d\d-\d\d\d\d')". 
+              Here, we just escaped the parethesis by adding a backslash before it.
+          </li>
+          <li>You can use the pipe character, "|", found above the enter key to specify a prefix to a word, and then provide possible endings to the word.</li>
+          <li>Say you wanted to find anything related to Batman using a regular expression. You could do this by writing a compile statement that looks like this: 
+              "batRegex = re.compile(r'Bat(man|mobile|copter)')<br>mo = batRegex.search('Batmobile lost a wheel')<br>mo.group()".<br> The mo.group() would return "Batmobile".</li>
+        </ul>
+      </div>
+    </div>
+    <div id="secResrc">
+      <h3>Section Resources</h3>
+      <ul>
+        <li>Lesson Twenty-Three: <a class="resources" href="https://automatetheboringstuff.com/chapter7/">ATBS E-book Chapter 7: Pattern Matching with Regular Expressions</a></li>
+      </ul>
+    </div>
+    <div class="pageButton">
+      <div class="prevPage">
+        <a class="prevPage" href="page9.html">Previous Page</a>
+      </div>
+      <div class="nextPage">
+        <a class="nextPage" href="page11.html">Next Page</a>
+      </div>
+    </div>
+  </body>
+</html>
