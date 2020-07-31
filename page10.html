@@ -60,6 +60,45 @@
               "batRegex = re.compile(r'Bat(man|mobile|copter)')<br>mo = batRegex.search('Batmobile lost a wheel')<br>mo.group()".<br> The mo.group() would return "Batmobile".</li>
         </ul>
       </div>
+      <div id="L25">
+        <h3>Lesson Twenty-Five: Repetition in Regex Patterns and Greedy/Nongreedy Matching</h3>
+        <ul>
+          <li>We can use the question mark character to find zero or one repetitions within a pattern we want to match. Here's an example where we look for the word Batman, or 
+              Batwoman:<br>"batRegex = re.compile(r'Bat(wo)?man')<br>mo = batRegex.search("The Adventures of Batman")<br>mo.group()"<br> This will output the string "Batman".
+          </li>
+          <li>In that last example, if you replaced Batman with Batwoman, it would still return Batwoman, but it would not return anything if you had more than one instance of 
+              "wo" before "man". For example, if you searched "The adventures of Batwowowowoman" it would not return anything.
+          </li>
+          <li>You can use this question mark to make things like area codes optional if you made made a regex object to search for phone numbers. If you ever need to literally 
+              use a question mark while trying to match a pattern, you can use a backslash before the question mark.
+          </li>
+          <li>You can also use an asterisk, or what is known as a star in regular expressions, to find zero or more matches in a pattern. For example, if we swapped out the 
+              question mark for a star in the batRegex example a few points ago, it would match a string like "Batwowowowowowowowowwoman" because there's zero or more instances of 
+              "wo" before "man". If you need to match a literal star, you can also escape the star with a backslash before it as well. 
+          </li>
+          <li>There's also the plus character, which means that you whatever group you're trying to match must appear at least once, but it can appear more than that as well. Going 
+              back to the batRegex example from before, searching "the adventures of Batman" would now return false because there isn't an instance of "wo" before "man". If you need 
+              to match a literal plus sign, you can use a backslah beforehand to do so. 
+          </li>
+          <li>If you want to match a specific number of instnces of a repetition in a pattern, you can do so by inserting the number in a pair of curly braces after the group you'd 
+              like match in a pattern. For example, you could write something like:<br>"haRegex = re.compile(r'(Ha) {3}')<br>mo = haRegex.search('He said "HaHaHa"')<br>mo.group()". This 
+              will result in a match of "HaHaHa", but if there was one more or less instances of "Ha" it wouldn't return anything.
+          </li>
+          <li>You can also have a second number in the curly braces, separated by a comma, to represent at least x, at most y. Using the haRegex object from before we could change the 
+              compile statement to look like: "haRegex = (r'(Ha) {3,5}')". Now we can match a string that has at least 3 "Ha"s, but it couls also go up and including 5 "Ha"s.
+          </li>
+          <li>Just like slices, you can leave one side of the comma blank so as to leave it going forever in that direction. So if you left the left side blank, so it looks like: {, 5}, 
+              it would match 0-5 instances of whatever you were searching for. And if you left the right side blank, it would have at least x instances or more. So {3,} would match anything 
+              with 3 or more instances of whatever you were searching for.
+          </li>
+          <li>If you were to write a compile statement that looks like: (r'(\d){3,5}'), and searched the string '1234567890', it would match the string "12345". This is because if 
+              left unspecified, Python will try and match the first string that matches, with the highest number of instnces available. This is known as Greddy matching.
+          </li>
+          <li>You can get a Nongreddy match if you simply put a question mark after your curly braces. Now if you use the same compile statement as above and search the same string
+              as above, it will return "123" because it was the first and quickest available match.
+          </li>
+        </ul>
+      </div>
     </div>
     <div id="secResrc">
       <h3>Section Resources</h3>
