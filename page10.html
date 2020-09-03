@@ -80,22 +80,79 @@
               back to the batRegex example from before, searching "the adventures of Batman" would now return false because there isn't an instance of "wo" before "man". If you need 
               to match a literal plus sign, you can use a backslah beforehand to do so. 
           </li>
-          <li>If you want to match a specific number of instnces of a repetition in a pattern, you can do so by inserting the number in a pair of curly braces after the group you'd 
+          <li>If you want to match a specific number of instances of a repetition in a pattern, you can do so by inserting the number in a pair of curly braces after the group you'd 
               like match in a pattern. For example, you could write something like:<br>"haRegex = re.compile(r'(Ha) {3}')<br>mo = haRegex.search('He said "HaHaHa"')<br>mo.group()". This 
               will result in a match of "HaHaHa", but if there was one more or less instances of "Ha" it wouldn't return anything.
           </li>
           <li>You can also have a second number in the curly braces, separated by a comma, to represent at least x, at most y. Using the haRegex object from before we could change the 
-              compile statement to look like: "haRegex = (r'(Ha) {3,5}')". Now we can match a string that has at least 3 "Ha"s, but it couls also go up and including 5 "Ha"s.
+              compile statement to look like: "haRegex = (r'(Ha) {3,5}')". Now we can match a string that has at least 3 "Ha"s, but it could also go up and including 5 "Ha"s.
           </li>
           <li>Just like slices, you can leave one side of the comma blank so as to leave it going forever in that direction. So if you left the left side blank, so it looks like: {, 5}, 
               it would match 0-5 instances of whatever you were searching for. And if you left the right side blank, it would have at least x instances or more. So {3,} would match anything 
               with 3 or more instances of whatever you were searching for.
           </li>
           <li>If you were to write a compile statement that looks like: (r'(\d){3,5}'), and searched the string '1234567890', it would match the string "12345". This is because if 
-              left unspecified, Python will try and match the first string that matches, with the highest number of instnces available. This is known as Greddy matching.
+              left unspecified, Python will try and match the first string that matches, with the highest number of instances available. This is known as Greedy matching.
           </li>
-          <li>You can get a Nongreddy match if you simply put a question mark after your curly braces. Now if you use the same compile statement as above and search the same string
+          <li>You can get a Nongreedy match if you simply put a question mark after your curly braces. Now if you use the same compile statement as above and search the same string
               as above, it will return "123" because it was the first and quickest available match.
+          </li>
+        </ul>
+      </div>
+      <div id="L26">
+        <h3>Lesson Twenty-Six: Regex Character Classes and the findall() Method</h3>
+        <ul>
+          <li>Just to set up this lesson, you might want to open the IDLE window, import the Regex module, and make a compile statement to match a phone number, as shown in the final
+            point in lesson 23. 
+          </li>
+          <li>In previous lessons, we used the .search() method to find the first match for a string.</li>
+          <li>Instead, we can use the .findall() method to well, find all the matches in any given string. This can be helpful for skimming large passages of text for certain things, 
+              like a phone number for instance. 
+          </li>
+          <li>One interesting thing about the .findall() method is that unlike the .search method, which returns a match object data type, the .findall() method returns a list data type.</li>
+          <li>If you happen to use groups for your compile statement, using the .findall() method will result in a list of tuples being returned. For example, if you grouped the phone 
+              number compile statement by the area code and the rest of the phone number, the .findall() method would return a list with a tuple, where the area code would be one string item
+              inside, and the rest of the number would be another string item inside.
+          </li>
+          <li>You can also have groups inside of groups, so you could always have a phoneRegex with the area code, and the main number, and then you could surround the whole thing with 
+              parenthesis. Using the .findall() method would result in a tuple with the area code, the main number, and the entire number. 
+          </li>
+          <li>We've already learned a little bit about character classes before, without even knowing it! the \d that we've been using for the phone number regex is known as a digit 
+              class, and it can be used to find any digit in a string. 
+          </li>
+          <li>Now, in this lesson, we will learn all about the other types of character classes we can use for Regex compile statements.
+            <ul>
+              <li>The first one that was already mentioned and had been used and explained, is "\d" which is used to match any numeric digit from 0 to 9.</li>
+              <li>The second one we'll talk about is "\D" which is used to match anything that is <i>not</i> a numeric digit from 0 to 9.</li>
+              <li>The third class is "\w" which is known to match "word characters". This class is used to match any letter, numeric digit, or the underscore character. It does not match
+                  things like punction, or space characters.
+              </li>
+              <li>The next one is "\W", which is anything that is <i>not</i> a letter, numeric digit, or underscore character.</li>
+              <li>The final set of character classes starts off with "\s", which is used to match any space, tab, or newline characters.</li>
+              <li>And finally we have "\S" which is used to match anything that is <i>not</i> a space, tab, or newline character.</li>
+            </ul>
+          </li>
+          <li>We can use this new knowledge to to practice with an example. One thing you should do before you get started with this practice problem is store these lyrics in a variable: 
+              '12 drummers drumming, 11 pipers piping, 10 lords a leaping, 9 ladies dancing, 8 maids a milking, 7 swans a swimming, 6 geese a laying, 5 golden rings, 4 calling birds, 
+               3 french hens, 2 turtle doves, and 1 partridge in a pear tree'
+          </li>
+          <li>Now, we can write a compile statement that looks for each day's number, and 1 word following it. The compile statement looks like this: "xmasRegex = re.compile(r'\d+\s\w+')"</li>
+          <li>To start this off we use the digit class to look for one or more digits, because we have double <i>and</i> single digit numbers that we're looking for. For the next step, 
+              we use the space character because there's a space between the digit(s) and the word. Then we use the \w, or the word character to find one or more letter, digit, or underscore 
+              charcter. 
+          </li>
+          <li>Using the .findall() method will return a list with the day, and the first word following the digit(s) of the day.</li>
+          <li>You can also create your own character classes, and the next few points will show you just how to do that.</li>
+          <li>To create your own character class, you'll want to store your compile statement string inside of square brackets. So for instance, we can create a compile statement that searches 
+              for vowels that looks like: "vowelRegex = re.compile(r'[aeiou]')".
+          </li>
+          <li>You can also use dashes inside the brackets to have a shorter list of letters. So if you wanted all lower case a through z in your character class, you could simply use "[a-z]".</li>
+          <li>You can also use curly braces besides the brackets to specify a number of repetitions. For instance if you wanted to find vowels that were right next to each other, you could 
+              write "re.compile(r'[aeiouAEIOU]{2}')". Now words like "eat" and "food" would return the strings 'ea' and 'oo' when passed through the .findall() method.
+          </li>
+          <li>You can also make what is known as a negative character class, which is where you insert things that are not supposed to match when passed through the .findall() method.</li>
+          <li>To do this you can simply put a carrot, "^", symbol right inside your brackets, before you type anything else. For instance if you wanted something that looked for consonants, 
+              numeric digits and other characters, you could write a compile statement that looks like this: "re.compile(r'[^aeiouAEIOU]')".
           </li>
         </ul>
       </div>
